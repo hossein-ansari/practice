@@ -5,16 +5,30 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: [{ count: 0 }],
+      count: 0 
     };
   }
-  render() {
-    return <div>
-      <button>up</button>
-      <h1>{this.state.user[0].count}</h1>
-      <button>down</button>
 
-    </div>;
+  upHandler() {
+    this.setState((prevstate) => {
+      return {count : prevstate.count + 1}
+    });
+  }
+  downHandler() {
+    this.setState((prevstate) => {
+  
+      return {count : prevstate.count - 1}
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.upHandler.bind(this)}>up</button>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.downHandler.bind(this)}>down</button>
+      </div>
+    );
   }
 }
 export default App;
