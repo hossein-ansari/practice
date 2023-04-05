@@ -7,6 +7,7 @@ class App extends Component {
     this.state = {
       count: 0,
       color: "blue",
+      news: ['gta vi released'],
     };
   }
 
@@ -35,9 +36,9 @@ class App extends Component {
     }
   }
   render() {
-    let moveOut = null
+    let moveOut = null;
     if (this.state.count > 5) {
-      moveOut = 'dont'
+      moveOut = "dont";
     }
     return (
       <div id={this.state.color}>
@@ -54,6 +55,7 @@ class App extends Component {
           down
         </button>
         <h2>{moveOut} go out</h2>
+        {(this.state.news.length != 0) && (<h3>news:{this.state.news.length}</h3>)}
       </div>
     );
   }
