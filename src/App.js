@@ -42,7 +42,7 @@ class App extends Component {
           up
         </button>
         <h1>{this.state.count}</h1>
-        <button id="msgCold" onClick={this.downHandler.bind(this,'its cold')}>down</button>
+        <button id="msgCold" onClick={()=>{this.downHandler('its cold')}}>down</button>
       </div>
     );
   }
