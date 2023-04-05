@@ -29,20 +29,31 @@ class App extends Component {
       return { count: prevstate.count - 1 };
     });
     if (this.state.count <= 3) {
-      let msg1 = document.getElementById('msgCold')
+      let msg1 = document.getElementById("msgCold");
       this.setState({ color: "blue" });
-      msg1.innerText = msg
-
+      msg1.innerText = msg;
     }
   }
   render() {
+    let moveOut = null
+    if (this.state.count > 5) {
+      moveOut = 'dont'
+    }
     return (
       <div id={this.state.color}>
         <button id="upBtn" onClick={this.upHandler.bind(this)}>
           up
         </button>
         <h1>{this.state.count}</h1>
-        <button id="msgCold" onClick={()=>{this.downHandler('its cold')}}>down</button>
+        <button
+          id="msgCold"
+          onClick={() => {
+            this.downHandler("its cold");
+          }}
+        >
+          down
+        </button>
+        <h2>{moveOut} go out</h2>
       </div>
     );
   }
