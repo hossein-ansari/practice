@@ -21,7 +21,7 @@ class App extends Component {
       this.setState({ color: "red" });
     }
   }
-  downHandler() {
+  downHandler(msg) {
     if (this.state.count <= 0) {
       return false;
     }
@@ -29,7 +29,10 @@ class App extends Component {
       return { count: prevstate.count - 1 };
     });
     if (this.state.count <= 3) {
+      let msg1 = document.getElementById('msgCold')
       this.setState({ color: "blue" });
+      msg1.innerText = msg
+
     }
   }
   render() {
@@ -39,7 +42,7 @@ class App extends Component {
           up
         </button>
         <h1>{this.state.count}</h1>
-        <button onClick={this.downHandler.bind(this)}>down</button>
+        <button id="msgCold" onClick={this.downHandler.bind(this,'its cold')}>down</button>
       </div>
     );
   }
