@@ -7,7 +7,8 @@ class App extends Component {
     this.state = {
       count: 0,
       color: "blue",
-      news: ['gta vi released'],
+      news: ["gta vi released", "mincraft deleted"],
+      newsCount: 0,
     };
   }
 
@@ -35,6 +36,16 @@ class App extends Component {
       msg1.innerText = msg;
     }
   }
+  NotificationHandler() {
+    console.log("click");
+    alert(this.state.news[0]);
+    this.state.news.shift();
+
+    console.log(this.state.news);
+    this.setState((prev) => {
+      return this.state.news.length - 1;
+    });
+  }
   render() {
     let moveOut = null;
     if (this.state.count > 5) {
@@ -55,7 +66,11 @@ class App extends Component {
           down
         </button>
         <h2>{moveOut} go out</h2>
-        {(this.state.news.length != 0) && (<h3>news:{this.state.news.length}</h3>)}
+        {this.state.news.length > 0 && (
+          <h3 onClick={this.NotificationHandler.bind(this)}>
+            news:{this.state.news.length}
+          </h3>
+        )}
       </div>
     );
   }
