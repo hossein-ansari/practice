@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { Component } from "react";
-
+import Carts from "./Carts";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -9,6 +9,11 @@ class App extends Component {
       color: "blue",
       news: ["gta vi released", "mincraft deleted"],
       newsCount: 0,
+      info : [
+    { name: "amir", id: 0 },
+    { name: "mmd", id: 30 },
+    { name: "morad", id: 20 },
+  ]
     };
   }
 
@@ -71,6 +76,9 @@ class App extends Component {
             news:{this.state.news.length}
           </h3>
         )}
+        <Carts {...this.info[0]} />
+        <Carts {...this.info[0]} />
+
       </div>
     );
   }
