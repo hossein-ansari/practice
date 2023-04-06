@@ -8,12 +8,11 @@ class App extends Component {
       count: 0,
       color: "blue",
       news: ["gta vi released", "mincraft deleted"],
-      newsCount: 0,
-      info : [
-    { name: "amir", id: 0 },
-    { name: "mmd", id: 30 },
-    { name: "morad", id: 20 },
-  ]
+      info: [
+        { name: "amir", id: 0 },
+        { name: "mmd", id: 30 },
+        { name: "morad", id: 20 },
+      ],
     };
   }
 
@@ -57,7 +56,7 @@ class App extends Component {
       moveOut = "dont";
     }
     return (
-      <div id={this.state.color}>
+      <div className="base" id={this.state.color}>
         <button id="upBtn" onClick={this.upHandler.bind(this)}>
           up
         </button>
@@ -76,9 +75,9 @@ class App extends Component {
             news:{this.state.news.length}
           </h3>
         )}
-        <Carts {...this.info[0]} />
-        <Carts {...this.info[0]} />
-
+        {this.state.info.map((n) => (
+          <Carts {...n} />
+        ))}
       </div>
     );
   }
