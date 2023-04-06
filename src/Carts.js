@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./Carts.css";
 export default function Carts(props) {
     let {name,age} = props
   return (

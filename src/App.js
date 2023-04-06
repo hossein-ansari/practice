@@ -9,9 +9,9 @@ class App extends Component {
       color: "blue",
       news: ["gta vi released", "mincraft deleted"],
       info: [
-        { name: "amir", id: 0 },
-        { name: "mmd", id: 30 },
-        { name: "morad", id: 20 },
+        { name: "alex", id: 0 },
+        { name: "mikle", id: 30 },
+        { name: "jana", id: 20 },
       ],
     };
   }
