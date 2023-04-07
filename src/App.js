@@ -76,7 +76,8 @@ class App extends Component {
           </h3>
         )}
         {this.state.info.map((n) => (
-          <Carts {...n} />
+          <div key={n.id}><Carts {...n} /></div>
+          
         ))}
       </div>
     );
