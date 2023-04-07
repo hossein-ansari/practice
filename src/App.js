@@ -12,7 +12,9 @@ class App extends Component {
         { name: "alex", id: 0 },
         { name: "mikle", id: 30 },
         { name: "jana", id: 20 },
+
       ],
+      inputValue : ""
     };
   }
 
@@ -50,6 +52,12 @@ class App extends Component {
       return this.state.news.length - 1;
     });
   }
+  onChangeHandler(e) {
+    this.setState((prev)=>{
+      console.log(e.target.value);
+      return {inputValue : e.target.value}
+    });
+  }
   render() {
     let moveOut = null;
     if (this.state.count > 5) {
@@ -76,9 +84,15 @@ class App extends Component {
           </h3>
         )}
         {this.state.info.map((n) => (
-          <div key={n.id}><Carts {...n} /></div>
-          
+          <div key={n.id}>
+            <Carts {...n} />
+          </div>
         ))}
+        <input
+          type="text"
+          value={this.state.inputValue}
+          onChange={this.onChangeHandler.bind(this)}
+        />
       </div>
     );
   }
