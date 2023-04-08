@@ -12,9 +12,9 @@ class App extends Component {
         { name: "alex", id: 0 },
         { name: "mikle", id: 30 },
         { name: "jana", id: 20 },
-
       ],
-      inputValue : ""
+      inputValue: "",
+      submited: null,
     };
   }
 
@@ -53,9 +53,18 @@ class App extends Component {
     });
   }
   onChangeHandler(e) {
-    this.setState((prev)=>{
-      console.log(e.target.value);
-      return {inputValue : e.target.value}
+    this.setState((prev) => {
+      return { inputValue: e.target.value };
+    });
+  }
+  submitHandler(e) {
+    e.preventDefault();
+    this.setState((prev) => {
+      if (this.state.inputValue == false) {
+        return { submited: false };
+      } else {
+        return { submited: true };
+      }
     });
   }
   render() {
@@ -88,11 +97,18 @@ class App extends Component {
             <Carts {...n} />
           </div>
         ))}
-        <input
-          type="text"
-          value={this.state.inputValue}
-          onChange={this.onChangeHandler.bind(this)}
-        />
+        <form onSubmit={this.submitHandler.bind(this)} action="">
+          <input
+            type="text"
+            value={this.state.inputValue}
+            onChange={this.onChangeHandler.bind(this)}
+          />
+          {this.state.submited == false && (
+            <span className="spanNotification">*</span>
+          )}
+
+          <input type="submit" value="Send Request" />
+        </form>
       </div>
     );
   }
