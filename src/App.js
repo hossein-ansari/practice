@@ -6,19 +6,20 @@ class App extends Component {
     super();
     this.state = {
       countriesData: {
-         iran: ["tabriz", "fars", "esfahan", "mashhad"] ,
-         unitedStates: ["chicago", "Los Angeles", "san diego"] ,
-         canada: ["Toronto", "Vancouver", "Montreal"] },
-      
+        iran: ["tabriz", "fars", "esfahan", "mashhad"],
+        unitedStates: ["chicago", "Los Angeles", "san diego"],
+        canada: ["Toronto", "Vancouver", "Montreal"],
+      },
+
       countrySelected: "",
-      citiesData : []
+      citiesData: [],
     };
   }
-  selectCountryHandler(e){
-    let targetCountry = e.target.value
-   
-    this.setState({countrySelected : `${targetCountry}`})
-    this.setState({citiesData :this.state.countriesData[targetCountry]})
+  selectCountryHandler(e) {
+    let targetCountry = e.target.value;
+
+    this.setState({ countrySelected: `${targetCountry}` });
+    this.setState({ citiesData: this.state.countriesData[targetCountry] });
     console.log(this.state.countriesData[targetCountry]);
   }
   render() {
@@ -27,7 +28,11 @@ class App extends Component {
         <div>
           <form action="">
             {/* /* country select */}
-            <select onChange={this.selectCountryHandler.bind(this)} name="" id="">
+            <select
+              onChange={this.selectCountryHandler.bind(this)}
+              name=""
+              id=""
+            >
               <option value="iran">select</option>
               <option value="iran">iran</option>
               <option value="unitedStates">unitedStates</option>
@@ -35,13 +40,14 @@ class App extends Component {
             </select>
             {/* /* city select */}
 
-            <select  name="" id="">
-              
-              {this.state.countrySelected == false ? (<option value=''>select</option>)
-               :this.state.citiesData.map((city)=>{
-                  return <option value={city}>{city}</option>
+            <select name="" id="">
+              {this.state.countrySelected == false ? (
+                <option value="">select</option>
+              ) : (
+                this.state.citiesData.map((city) => {
+                  return <option value={city}>{city}</option>;
                 })
-              }
+              )}
             </select>
             <input type="submit" />
           </form>
