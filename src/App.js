@@ -10,7 +10,7 @@ class App extends Component {
         unitedStates: ["chicago", "Los Angeles", "san diego"],
         canada: ["Toronto", "Vancouver", "Montreal"],
       },
-
+      users: [{ id: 0 ,name: "ali" }, {id: 1, name: "hossein" }, {id: 2, name: "mmd" }],
       countrySelected: "",
       citiesData: [],
     };
@@ -21,6 +21,9 @@ class App extends Component {
     this.setState({ countrySelected: `${targetCountry}` });
     this.setState({ citiesData: this.state.countriesData[targetCountry] });
     console.log(this.state.countriesData[targetCountry]);
+  }
+  removeHandler(id) {
+    console.log(id);
   }
   render() {
     return (
@@ -52,6 +55,9 @@ class App extends Component {
             <input type="submit" />
           </form>
         </div>
+          {this.state.users.map(user => {
+            <Carts key={user.id} onRemove={this.removeHandler}></Carts>;
+          })}
       </div>
     );
   }
