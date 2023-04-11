@@ -10,7 +10,11 @@ class App extends Component {
         unitedStates: ["chicago", "Los Angeles", "san diego"],
         canada: ["Toronto", "Vancouver", "Montreal"],
       },
-      users: [{ id: 0 ,name: "ali" }, {id: 1, name: "hossein" }, {id: 2, name: "mmd" }],
+      users: [
+        { id: 0, name: "ali" },
+        { id: 1, name: "hossein" },
+        { id: 2, name: "mmd" },
+      ],
       countrySelected: "",
       citiesData: [],
     };
@@ -55,9 +59,9 @@ class App extends Component {
             <input type="submit" />
           </form>
         </div>
-          {this.state.users.map(user => {
-            <Carts key={user.id} onRemove={this.removeHandler}></Carts>;
-          })}
+        {this.state.users.map((user) => (
+          <Carts key={user.id}{...user} onRemove={this.removeHandler} />
+        ))}
       </div>
     );
   }

@@ -1,14 +1,14 @@
 
 import "./Carts.css";
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Carts extends Component {
-  removeHandler(id){
-    console.log(id);
+export default class Carts extends React.Component {
+  removeBtn(id){
+    this.props.onRemove(id)
   }
   render() {
     return (
-      <div ><button onClick={this.removeHandler.bind(this,this.props.id)}>remove</button></div>
+      <h1>{this.props.name}<button onClick={this.removeBtn.bind(this,this.props.id)}>remove</button></h1>
     )
   }
 }
