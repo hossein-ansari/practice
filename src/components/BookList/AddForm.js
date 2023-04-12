@@ -96,7 +96,7 @@ export default class AddForm extends Component {
             className="btn btn-warning btn-block add-btn"
           />
         </form>
-        <table class="table table-striped mt-5 text-center">
+        <table className="table table-striped mt-5 text-center">
           <thead>
             <tr>
               <th>Title</th>
