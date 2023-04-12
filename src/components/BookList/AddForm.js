@@ -52,7 +52,7 @@ export default class AddForm extends Component {
     return (
       <>
         <form onSubmit={this.addBookHandler.bind(this)} id="book-form" autocomplete="off">
-          <div className="form-group">
+          <div >
             <label for="title">Title</label>
             <input
               value={this.state.title}
@@ -61,11 +61,11 @@ export default class AddForm extends Component {
               }}
               type="text"
               id="title"
-              className="form-control"
+              
             />
           </div>
 
-          <div className="form-group">
+          <div >
             <label for="author">Author</label>
             <input
               value={this.state.author}
@@ -74,11 +74,11 @@ export default class AddForm extends Component {
               }}
               type="text"
               id="author"
-              className="form-control"
+             
             />
           </div>
 
-          <div className="form-group">
+          <div >
             <label for="year">Year</label>
             <input
               value={this.state.year}
@@ -87,16 +87,16 @@ export default class AddForm extends Component {
               }}
               type="text"
               id="year"
-              className="form-control"
+              
             />
           </div>
           <input
             type="submit"
             value="Add Book"
-            className="btn btn-warning btn-block add-btn"
+           
           />
         </form>
-        <table className="table table-striped mt-5 text-center">
+        <table>
           <thead>
             <tr>
               <th>Title</th>
