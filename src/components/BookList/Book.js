@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
 export default class Book extends Component {
+    
     render() {
+        console.log(this.props);
         return (
             <tr>
-                <th>شاهنامه</th>
-                <th>فردوسی</th>
-                <th>1254</th>
+                <th>{this.props.title}</th>
+                <th>{this.props.author}</th>
+                <th>{this.props.year}</th>
             </tr>
         )
     }

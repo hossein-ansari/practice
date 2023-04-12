@@ -42,8 +42,10 @@ export default class AddForm extends Component {
             author : this.state.author,
             year : this.state.year,
         }
-        this.state.books.push(newBook)
-        console.log(this.state.books);
+        this.setState({
+            books: [...this.state.books, newBook]
+        })
+        
     }
   }
   render() {
@@ -103,7 +105,9 @@ export default class AddForm extends Component {
             </tr>
           </thead>
           <tbody id="book-list">
-            <Book />
+            {this.state.books.map((book) => (
+            <Book {...book} key={book.id} />
+            ))}
           </tbody>
         </table>
       </>
