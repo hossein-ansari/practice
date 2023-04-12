@@ -7,7 +7,7 @@ export default class AddForm extends Component {
 
     this.state = {
       books: [],
-        id : null,
+      id: null,
       title: "",
       author: "",
       year: "",
@@ -31,28 +31,27 @@ export default class AddForm extends Component {
   }
   addBookHandler(e) {
     e.preventDefault();
-    if (
-      (this.state.title) &&
-      (this.state.author) &&
-      (this.state.year)
-    ) {
-        let newBook = {
-            id : this.state.books.length + 1,
-            title : this.state.title,
-            author : this.state.author,
-            year : this.state.year,
-        }
-        this.setState({
-            books: [...this.state.books, newBook]
-        })
-        
+    if (this.state.title && this.state.author && this.state.year) {
+      let newBook = {
+        id: this.state.books.length + 1,
+        title: this.state.title,
+        author: this.state.author,
+        year: this.state.year,
+      };
+      this.setState({
+        books: [...this.state.books, newBook],
+      });
     }
   }
   render() {
     return (
       <>
-        <form onSubmit={this.addBookHandler.bind(this)} id="book-form" autocomplete="off">
-          <div >
+        <form
+          onSubmit={this.addBookHandler.bind(this)}
+          id="book-form"
+          autocomplete="off"
+        >
+          <div>
             <label for="title">Title</label>
             <input
               value={this.state.title}
@@ -61,11 +60,10 @@ export default class AddForm extends Component {
               }}
               type="text"
               id="title"
-              
             />
           </div>
 
-          <div >
+          <div>
             <label for="author">Author</label>
             <input
               value={this.state.author}
@@ -74,11 +72,10 @@ export default class AddForm extends Component {
               }}
               type="text"
               id="author"
-             
             />
           </div>
 
-          <div >
+          <div>
             <label for="year">Year</label>
             <input
               value={this.state.year}
@@ -87,14 +84,9 @@ export default class AddForm extends Component {
               }}
               type="text"
               id="year"
-              
             />
           </div>
-          <input
-            type="submit"
-            value="Add Book"
-           
-          />
+          <input type="submit" value="Add Book" />
         </form>
         <table>
           <thead>
@@ -106,7 +98,7 @@ export default class AddForm extends Component {
           </thead>
           <tbody id="book-list">
             {this.state.books.map((book) => (
-            <Book {...book} key={book.id} />
+              <Book {...book} key={book.id} />
             ))}
           </tbody>
         </table>
