@@ -6,11 +6,6 @@ export default class AddForm extends Component {
     super();
 
     this.state = {
-      books: [],
-      id: null,
-      title: "",
-      author: "",
-      year: "",
     };
   }
 
