@@ -5,39 +5,9 @@ export default class AddForm extends Component {
   constructor() {
     super();
 
-    this.state = {
-    };
+    this.state = {};
   }
 
-  titleInput(e) {
-    this.setState(() => {
-      return { title: e.target.value };
-    });
-  }
-  authorInput(e) {
-    this.setState(() => {
-      return { author: e.target.value };
-    });
-  }
-  yearInput(e) {
-    this.setState(() => {
-      return { year: e.target.value };
-    });
-  }
-  addBookHandler(e) {
-    e.preventDefault();
-    if (this.state.title && this.state.author && this.state.year) {
-      let newBook = {
-        id: this.state.books.length + 1,
-        title: this.state.title,
-        author: this.state.author,
-        year: this.state.year,
-      };
-      this.setState({
-        books: [...this.state.books, newBook],
-      });
-    }
-  }
   render() {
     return (
       <>
