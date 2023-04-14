@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import Header  from './components/Header/Header'
-import AddForm from './components/BookList/AddForm'
 
 export default class App extends Component {
 
