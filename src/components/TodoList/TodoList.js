@@ -10,7 +10,6 @@ export default class TodoList extends Component {
       todoTitle: "",
       status: "all",
     };
-
   }
   todoInput(e) {
     this.setState({
@@ -34,18 +33,25 @@ export default class TodoList extends Component {
       });
     }
   }
-  removeHandler(id){
-    let newtodos = this.state.todos.filter(removeId =>{
-        return removeId.id != id
+  ///////////////
+  removeHandler(id) {
+    let newtodos = this.state.todos.filter((removeId) => {
+      return removeId.id != id;
     });
-    this.setState({todos : newtodos})
+    this.setState({ todos: newtodos });
   }
-  completed(id){
-    // id.complete = !id.complete 
-    console.log(id);
+  ////////////////
+  completed(id) {
+    let newtodos = [...this.state.todos]
+    
+    newtodos.forEach((completid) => {
+      if (completid.id === id) {
+        completid.complete = !completid.complete
+      }
+    });
+    this.setState({todos:newtodos})
   }
   render() {
-    
     return (
       <>
         <Header />
@@ -76,7 +82,13 @@ export default class TodoList extends Component {
         <div className="todo-container">
           <ul className="todo-list">
             {this.state.todos.map((todo) => (
-              <Todo {...todo} todos={this.state.todos} onComplet={this.completed.bind(this)} onRemove={this.removeHandler.bind(this)} key={todo.id} />
+              <Todo
+                {...todo}
+                todos={this.state.todos}
+                onComplet={this.completed.bind(this)}
+                onRemove={this.removeHandler.bind(this)}
+                key={todo.id}
+              />
             ))}
           </ul>
         </div>
