@@ -52,13 +52,19 @@ export default class TodoList extends Component {
     this.setState({todos:newtodos})
   }
   statusHandler(e){
-    this.todos.forEach(element => {
-      if (element.complete == true && e.target.value == 'completed') {
-        let newtodos = []
+    let newtodos = []
+    console.log(e.target.value);
+    this.state.todos.forEach((element) => {
+      if (element.complete === true && e.target.value === 'completed') {
         newtodos.push(element)
-        this.setState({todos:newtodos})
+      }
+      else if(element.complete === false && e.target.value === 'uncompleted'){
+        newtodos.push(element)
+      }else if (e.target.value === 'all'){
+        newtodos.push(element)
       }
     });
+    this.setState({todos:newtodos})
   }
   render() {
     return (
@@ -80,7 +86,7 @@ export default class TodoList extends Component {
             <i className="fas fa-plus-square">+</i>
           </button>
           <div className="select">
-            <select name="todos" onChange={(element)=>{this.statusHandler(element)}} className="filter-todo">
+            <select name="todos" onChange={(element)=>this.statusHandler(element)} className="filter-todo">
               <option value="all">All</option>
               <option value="completed">Completed</option>
               <option value="uncompleted">Uncompleted</option>
