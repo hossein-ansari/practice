@@ -12,15 +12,4 @@
   box-shadow: 0 !important;
 }
 
-body {
-  background: rgb(68, 100, 173);
-  background: linear-gradient(
-    100deg,
-    rgba(68, 100, 173, 1),
-    rgba(74, 21, 110, 1)
-  );
-  color: white;
-  min-height: 100vh;
-  margin-bottom: 2rem;
-}
 

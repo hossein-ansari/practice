@@ -9,7 +9,7 @@ export default class App extends Component {
     }
     render() {
         return (
-            <div><Alert variant='info'>test msg</Alert></div>
+            <Alert variant='info'>Test MSG <Alert.Link href='#'>Home</Alert.Link> </Alert>
         )
     }
 }
