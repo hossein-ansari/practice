@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-
+import Alert from 'react-bootstrap/Alert';
 export default class App extends Component {
     constructor(props){
         super(props)
@@ -9,7 +9,7 @@ export default class App extends Component {
     }
     render() {
         return (
-            <div></div>
+            <div><Alert variant='info'>test msg</Alert></div>
         )
     }
 }
