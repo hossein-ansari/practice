@@ -7,6 +7,9 @@ export default class App extends Component {
         showModal:true
     };
   }
+  static getDerivedStateFromProps(){
+    console.log('getDerivedStateFromProps');
+  }
   componentDidMount(){
     console.log('mounted');
   }
