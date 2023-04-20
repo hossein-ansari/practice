@@ -7,6 +7,9 @@ export default class App extends Component {
         showModal:true
     };
   }
+  componentDidMount(){
+    console.log('mounted');
+  }
   render() {
     return (
       <div></div>
