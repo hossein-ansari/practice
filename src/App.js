@@ -15,7 +15,9 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div></div>
+      <div>
+        <h1>i just wanna turn on my lamp</h1>
+      </div>
     );
   }
 }
