@@ -16,7 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>i just wanna turn on my lamp and dont have any energy ok!!!</h1>
+        <h1>i dont have any energy ok!!!</h1>
       </div>
     );
   }
