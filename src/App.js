@@ -13,6 +13,13 @@ export default class App extends Component {
   componentDidMount(){
     console.log('mounted');
   }
+  shouldComponentUpdate(props,state){
+    console.log('update');
+    if (this.props.showModal == props.showModal) {
+      return false
+    }
+    return true
+  }
   render() {
     return (
       <div>
