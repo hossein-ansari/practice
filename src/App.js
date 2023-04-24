@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component ,PureComponent } from "react";
 import "./App.css";
-export default class App extends Component {
+export default class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,10 +15,7 @@ export default class App extends Component {
   }
   shouldComponentUpdate(props,state){
     console.log('update');
-    if (this.props.showModal == props.showModal) {
-      return false
-    }
-    return true
+
   }
   render() {
     return (
