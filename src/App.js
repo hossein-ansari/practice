@@ -20,7 +20,7 @@ export default class App extends PureComponent {
   render() {
     return (
       <div>
-        <h1>ok!!!</h1>
+        <button><input type="text" /></button>
       </div>
     );
   }
