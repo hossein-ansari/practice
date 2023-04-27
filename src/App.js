@@ -24,9 +24,7 @@ export default class App extends Component {
 
     return (
       <div>
-        {this.state.data.map((posts) => (
-          <h1>{posts.title}</h1>
-        ))}
+
       </div>
     );
   }
