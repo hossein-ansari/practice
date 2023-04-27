@@ -16,11 +16,8 @@ export default class App extends Component {
       method: "POST",
       body: this.state.formData,
     })
-      .then((Response) => Response.json())
-      .then((data) => this.setState({ data: data }));
   }
   render() {
-    console.log(this.state.data);
 
     return (
       <div>
