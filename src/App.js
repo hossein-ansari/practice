@@ -4,12 +4,17 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
+      data: [],    
+      formData:{
+      hossein:'name'
+    }
     };
+
   }
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "GET",
+      method: "POST",
+      body: this.state.formData,
     })
       .then((Response) => Response.json())
       .then((data) => this.setState({ data: data }));
