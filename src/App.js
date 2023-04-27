@@ -9,7 +9,6 @@ export default class App extends Component {
       hossein:'name'
     }
     };
-
   }
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -21,7 +20,6 @@ export default class App extends Component {
 
     return (
       <div>
-
       </div>
     );
   }
