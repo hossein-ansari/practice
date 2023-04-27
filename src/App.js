@@ -15,6 +15,12 @@ export default class App extends Component {
       method: "POST",
       body: this.state.formData,
     })
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "DELETE",
+      
+    }).then(Response=>Response.json())
+      .then(data=>console.log(data))
+
   }
   render() {
 
