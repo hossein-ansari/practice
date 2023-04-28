@@ -23,9 +23,9 @@ export default class App extends Component {
       .then(data=>console.log(data))
   }
   render() {
-
     return (
       <div>
+        <h2></h2>
       </div>
     );
   }
