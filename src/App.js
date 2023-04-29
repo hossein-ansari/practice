@@ -7,7 +7,6 @@ export default function App() {
     { name: "hossein", last: "ansari", age: 23 },
     { name: "amir", last: "ansari", age: 58 },
   ]);
-
   const up = () => {
     setCount((prevState) => {
       return prevState + 1;
@@ -19,11 +18,11 @@ export default function App() {
     });
   };
   const remove = (name) => {
-      setUsers((prevUser) => {
-      let newUsers=prevUser.filter((user) => {
+    setUsers((prevUser) => {
+      let newUsers = prevUser.filter((user) => {
         return user.name !== name;
       });
-      return newUsers
+      return newUsers;
     });
   };
   return (
