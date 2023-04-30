@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 
 export default function App() {
   const [count, setCount] = useState(12);
@@ -7,6 +7,9 @@ export default function App() {
     { name: "hossein", last: "ansari", age: 23 },
     { name: "amir", last: "ansari", age: 58 },
   ]);
+  useEffect(()=>{
+    console.log('mount shod');
+  })
   const up = () => {
     setCount((prevState) => {
       return prevState + 1;
