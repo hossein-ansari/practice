@@ -11,6 +11,9 @@ export default function App() {
     console.log('mount shod');
   },[])
   useEffect(()=>{
+    return console.log('mounting shod');
+  },[count])
+  useEffect(()=>{
     console.log('mount shod');
   },[count])
   const up = () => {
