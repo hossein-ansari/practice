@@ -10,6 +10,9 @@ export default function App() {
   useEffect(()=>{
     console.log('mount shod');
   },[])
+  useEffect(()=>{
+    console.log('mount shod');
+  },[count])
   const up = () => {
     setCount((prevState) => {
       return prevState + 1;
