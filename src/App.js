@@ -43,7 +43,7 @@ export default function App() {
       {users.map((user) => (
         <li>
           {user.name} {user.last}{" "}
-          <button onClick={() => remove(user.name)}>-</button>
+          <Button variant="outlined" onClick={() => remove(user.name)}>-</Button>
         </li>
       ))}
     </div>
