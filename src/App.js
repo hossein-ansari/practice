@@ -48,7 +48,7 @@ export default function App() {
 
       ))}
       <Alert severity="info">This is an info alert — check it out!</Alert>
-      <Typography variant="h1" component="h4">hello i from meta and welcome to my chanel</Typography>
+      <Typography variant="h4" component="h4">hello i from meta and wellcome to my chanel</Typography>
     </div>
   );
 }
