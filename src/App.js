@@ -1,5 +1,5 @@
 import React, { useState , useEffect} from "react";
-import Button from '@mui/material/Button';
+import {Button , Alert} from '@mui/material';
 export default function App() {
   const [count, setCount] = useState(12);
   const [users, setUsers] = useState([
@@ -45,7 +45,9 @@ export default function App() {
           {user.name} {user.last}{" "}
           <Button variant="outlined" onClick={() => remove(user.name)}>-</Button>
         </li>
+
       ))}
+      <Alert severity="info">This is an info alert — check it out!</Alert>
     </div>
   );
 }
