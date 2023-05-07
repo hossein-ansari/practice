@@ -28,7 +28,7 @@ export default function App() {
         <div
           style={{
             backgroundImage: `url(${img})`,
-            backgroundPosition: `right ${clientX * 2}px  bottom ${clientY * 2}px`,
+            backgroundPosition: `right ${clientX * 2 - 300}px  bottom ${clientY * 2 - 300}px`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
