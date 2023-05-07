@@ -1,7 +1,10 @@
 import React, { useState , useEffect} from "react";
 import {Button , Alert , Typography} from '@mui/material';
+import data from './data'
 export default function App() {
   const [count, setCount] = useState(12);
+  const [dataFake, setData] = useState(data);
+
   const [users, setUsers] = useState([
     { name: "ali", last: "ansari", age: 13 },
     { name: "hossein", last: "ansari", age: 23 },
@@ -35,6 +38,9 @@ export default function App() {
       return newUsers;
     });
   };
+  {dataFake.map( (name) =>(
+   console.log(name.value)
+  ))}
   return (
     <div>
       <button onClick={up}>+</button>
@@ -47,6 +53,9 @@ export default function App() {
         </li>
 
       ))}
+      {  data.map(name =>(
+   console.log(name.value); 
+  ))}
       <Alert severity="info">This is an info alert — check it out!</Alert>
       <Typography variant="h4" component="h4">hello i from meta and wellcome to my chanel</Typography>
     </div>
