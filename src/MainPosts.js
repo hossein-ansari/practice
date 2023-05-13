@@ -5,8 +5,9 @@ import Datas from "./Datas";
 export default function MainPosts() {
   const params = useParams();
   const [post, usePost] = useState(Datas);
+  console.log('lol');
   return (
-    <div>main post = {post.find((findid) => findid.id == params.id).name}
+    <div>
     lol
     </div>
   );
