@@ -8,7 +8,7 @@ export default function MainPosts() {
   console.log('lol');
   return (
     <div>
-    lol
+    {post.find(post => post.id == params.ID).name}
     </div>
   );
 }
