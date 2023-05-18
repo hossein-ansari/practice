@@ -13,7 +13,6 @@ export default function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/post/:ID" element={<Mainposts />} />
         <Route path="*" element={<NotFound />} />
-
       </Routes>
     </>
   );
