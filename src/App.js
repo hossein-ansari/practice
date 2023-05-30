@@ -8,8 +8,6 @@ export default function App() {
   const [post, usePost] = useState(Datas);
   return (
     <>
-
-    
       <Routes>
       <Route path="/" />
         <Route path="/posts" element={<Posts />} />
