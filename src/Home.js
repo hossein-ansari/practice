@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <div>
         <ul>
-            <li><Link to={'/'}>home</Link></li>
-            <li><Link to={'/posts'}>posts</Link></li>
-            <li><Link to={'./'}>about</Link></li>
+            <li><Link  className="links" to={'/'}>home</Link></li>
+            <li><Link  className="links" to={'/posts'}>posts</Link></li>
+            <li><Link  className="links" to={'./'}>about</Link></li>
         </ul>
     </div>
   )
