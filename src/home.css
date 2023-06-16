@@ -1,4 +1,7 @@
-
+ul li{
+    list-style: none;
+    margin: 10px;
+}
 .links{
     text-decoration: none;
     color: #0d0d0d;
