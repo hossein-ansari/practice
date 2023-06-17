@@ -7,7 +7,7 @@ export default function Home() {
         <ul>
             <li><Link  className="links" to={'/'}>home</Link></li>
             <li><Link  className="links" to={'/posts'}>posts</Link></li>
-            <li><Link  className="links" to={'./'}>about</Link></li>
+            <li><Link  className="links" to={'./about'}>about</Link></li>
         </ul>
     </div>
   )
