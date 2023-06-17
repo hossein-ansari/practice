@@ -12,3 +12,7 @@ ul{
     display: flex ;
     flex-direction: row;
 }
+.active{
+    color: blue;
+    background-color: wheat;
+}
