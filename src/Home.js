@@ -1,35 +1,13 @@
 import React from "react";
 import "./home.css";
-
-import { Link, NavLink } from "react-router-dom";
+import useToggle from "./useToggle";
 export default function Home() {
+  const [value , setValue] = useToggle(false)
   return (
     <div>
-      <ul>
-        <li>
-          <Link className="links" to={"/"}>
-            home
-          </Link>
-        </li>
-        <li>
-          <Link className="links" to={"/posts"}>
-            posts
-          </Link>
-        </li>
-        <li>
-          <Link className="links" to={"./about"}>
-            about
-          </Link>
-        </li>
-        <li>
-          <NavLink
-            className={((act) => (act ? "active" : ""), "links")}
-            to={"./panel"}
-          >
-            panel
-          </NavLink>
-        </li>
-      </ul>
+      <h1>{value.toString()}</h1>
+      <button onClick={setValue}>toggle</button>
+      
     </div>
   );
 }
