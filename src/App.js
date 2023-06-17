@@ -6,7 +6,6 @@ import Home from "./Home.js";
 export default function App() {
   const [post, usePost] = useState(Datas);
   const router = useRoutes(Routes);
-
   return (
     <>
       <Home />
