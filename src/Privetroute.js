@@ -3,7 +3,7 @@ import {islogin} from "./utils.js";
 import { Outlet } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 export default function Privetroute() {
-  let login = islogin("adf");
+  let login = islogin("ali");
     console.log(login);
   return <div>
      {login ? (<Outlet /> )  : <Navigate to={"./Posts"} />}
