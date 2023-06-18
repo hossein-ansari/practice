@@ -1,10 +1,12 @@
-import React, { memo } from 'react'
+import React, { memo, useRef } from 'react'
 
 const Memotry = memo(({msg})=>{
-    console.log('changed');
+    
+    console.log()
     return(
         <div>
-            <h1>what is love : {msg}</h1>
+            <h1  >what is love : {msg}</h1>
+            
         </div>
     )
 })
