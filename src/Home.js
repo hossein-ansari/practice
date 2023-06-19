@@ -2,15 +2,14 @@ import React, { useMemo, useState,useRef } from "react";
 import "./home.css";
 import useToggle from "./useToggle";
 import Memotry from "./Memotry";
+import useCalc from "./useCalc";
 export default function Home() {
   const [value, setValue] = useToggle(false);
-  const [add, setAdd] = useState(0);
+  const [add, setAdd] = useCalc(0);
   const [less, setLess] = useState(0);
   const Input = useRef()
   console.log(Input.current);
-  function addNum() {
-    setAdd((prevState) => prevState + 1);
-  }
+
   let i = 0
   const addNumber = useMemo(() => {
     i++
@@ -25,7 +24,7 @@ export default function Home() {
     <div>
       <h1>{value.toString()}</h1>
       <button onClick={setValue}>toggle</button>
-      <button onClick={addNum}>{add}</button>
+      <button onClick={setAdd}>{add}</button>
       <input ref={Input} type="text" />
       <button onClick={lessNum}>{less}</button>
       <Memotry msg={less}/>
