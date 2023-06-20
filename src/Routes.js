@@ -1,11 +1,11 @@
-import Mainposts from "./Mainposts";
+// import Mainposts from "./Mainposts";
 import About from "./About.js";
 import Posts from "./Posts";
 import Panel from "./Panel";
 import Privetroute from "./Privetroute";
 let Routes = [
   { path: "/posts", element: <Posts /> },
-  { path: "/post/:id", element: <Mainposts /> },
+  // { path: "/post/:id", element: <Mainposts /> },
 
   {
     path: "/about/*",
