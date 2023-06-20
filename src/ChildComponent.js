@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { userName } from './Contex'
+import './portal.css'
 import * as ReactDOM from 'react-dom';
 
 export default function ChildComponent() {
