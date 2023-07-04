@@ -10,7 +10,7 @@ export default function App() {
   const router = useRoutes(Routes);
   return (
     <ContexProvider>
-      <Home i />
+      <Home />
       {router}
       <ChildComponent />
     </ContexProvider>
