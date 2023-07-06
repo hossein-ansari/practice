@@ -29,3 +29,4 @@ console.log(testAny)
 let testLiteral: (18|19|20)=18
 testLiteral = 20
 console.log(testLiteral)
+// 'unknown' is like 'any' type but 'any' dont have type checking
