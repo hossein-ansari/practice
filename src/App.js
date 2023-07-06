@@ -24,4 +24,8 @@ console.log(isLogin('admin', 1111));
 // any type 
 var testAny = 12;
 testAny = 'owu';
-console.log(test);
+console.log(testAny);
+// literal type 
+var testLiteral = 18;
+testLiteral = 20;
+console.log(testLiteral);

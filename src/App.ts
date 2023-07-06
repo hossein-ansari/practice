@@ -24,4 +24,8 @@ console.log(isLogin('admin',1111))
 // any type 
 let testAny:any = 12
 testAny = 'owu'
-console.log(test)
+console.log(testAny)
+// literal type 
+let testLiteral: (18|19|20)=18
+testLiteral = 20
+console.log(testLiteral)
