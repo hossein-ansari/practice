@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.addTodo{
+    display: flex;
+    align-items: flex-end;
+    
+    width: 30vw;
+    height: 80vh;
+    margin-top: 3rem;
+    
+}
+.addTodoBar{
+    border-radius: 0 50px 0 0 ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(238, 33, 33);
+    width: 40vw;
+    height: 60vh;
+    
+
+}
+.addBtn{
+    border: 1px solid black;
+    
+
+}
+.descriptionInput{
+    border: 1px solid black;
+
+}
+.todoNameInput{
+    border: 1px solid black;
+
+}
+.todos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+   border-radius: 130px 130px 0 0 ;
+   width: 40vw;
+   height: 80vh;
+   border: 1px solid black;
+   
+}
+.todosUl{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+.todosli{
+    padding: 5px;
+    color: white;
+    
+    list-style-type: none;
+    max-width: 40vh;
+    min-width: 40vh;
+    height: 80px;
+    border: 2px solid black;
+    background-color: #424242;
+    border-radius: 10px;
+    margin: 5px;
+}
+.todoName{
+    padding: 10px;
+    width: fit-content;
+    height: 30px;
+    margin: 0 auto;
+
+}

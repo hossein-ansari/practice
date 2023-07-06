@@ -1,15 +1,15 @@
 let addBtn: any = document.querySelector(".addBtn");
 let descriptionInput: any = document.querySelector(".descriptionInput");
 let todoNameInput: any = document.querySelector(".todoNameInput");
-let todos: any = document.querySelector(".todos");
+let todosUl: any = document.querySelector(".todosUl");
 
 let todo: { todo: string; description: string } = { todo: "", description: "" };
 let todosArray: string[] = [];
 function addTodo() {
   console.log(todoNameInput.value, descriptionInput.value);
-  todos.insertAdjacentHTML(
-    "afterend",
-    `<li>${todoNameInput.value} ${descriptionInput.value}</li>`
+  todosUl.insertAdjacentHTML(
+    "beforeend",
+    `<li class='todosli'>${todoNameInput.value} ${descriptionInput.value}</li>`
   );
 }
 

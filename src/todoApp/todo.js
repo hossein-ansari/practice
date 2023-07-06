@@ -1,12 +1,12 @@
 var addBtn = document.querySelector(".addBtn");
 var descriptionInput = document.querySelector(".descriptionInput");
 var todoNameInput = document.querySelector(".todoNameInput");
-var todos = document.querySelector(".todos");
+var todosUl = document.querySelector(".todosUl");
 var todo = { todo: "", description: "" };
 var todosArray = [];
 function addTodo() {
     console.log(todoNameInput.value, descriptionInput.value);
-    todos.insertAdjacentHTML("afterend", "<li>".concat(todoNameInput.value, " ").concat(descriptionInput.value, "</li>"));
+    todosUl.insertAdjacentHTML("beforeend", "<li class='todosli'>".concat(todoNameInput.value, " ").concat(descriptionInput.value, "</li>"));
 }
 function updateValue(value) {
     descriptionInput.value = value.target.value;
