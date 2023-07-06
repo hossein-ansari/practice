@@ -9,7 +9,7 @@ function addTodo() {
   console.log(todoNameInput.value, descriptionInput.value);
   todosUl.insertAdjacentHTML(
     "beforeend",
-    `<li class='todosli'>${todoNameInput.value} ${descriptionInput.value}</li>`
+    `<li class='todosli'> <div>${todoNameInput.value}</div>  <div>${descriptionInput.value}</div> </li>`
   );
 }
 
