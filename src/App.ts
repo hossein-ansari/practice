@@ -21,3 +21,7 @@ function isLogin(user: String, password: number):boolean {
   }
 }
 console.log(isLogin('admin',1111))
+// any type 
+let testAny:any = 12
+testAny = 'owu'
+console.log(test)
