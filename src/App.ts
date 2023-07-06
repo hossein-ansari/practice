@@ -1,15 +1,23 @@
-
-// anotation 
-const num: number = 5;
+// anotation
+const num1: number = 5;
 // inference
-const num = 5; 
-// arry and obj 
+const num2 = 5;
+// arry and obj
 let datas: { id: number; name: string } = {
   id: 5,
   name: "ali",
 };
-let arry : (string|number)[]=['ali','mamad','soghra',12]
+let arry: (string | number)[] = ["ali", "mamad", "soghra", 12];
 console.log(arry);
 // tuple
-let arry2 :[string,number]=['mike',2]
-
+let arry2: [string, number] = ["mike", 2];
+// functions assign value
+function isLogin(user: String, password: number):boolean {
+  if (user === 'admin' && password === 1111) {
+    return true
+  }
+  else{
+    return false
+  }
+}
+console.log(isLogin('admin',1111))
