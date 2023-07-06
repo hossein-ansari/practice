@@ -1,17 +1,17 @@
 // anotation
-const num1: number = 5;
+var num1 = 5;
 // inference
-const num = 5;
-let num3 = 5;
-num3 = 'lol'
+var num = 5;
+var num3 = 5;
+num3 = 'lol';
 // arry and obj
-let datas: { id: number; name: string } = {
-  id: 5,
-  name: "ali",
+var datas = {
+    id: 5,
+    name: "ali",
 };
-let arry: (string | number)[] = ["ali", "mamad", "soghra", 12];
+var arry = ["ali", "mamad", "soghra", 12];
 console.log(arry);
-console.log(num3)
+console.log(num3);
 // // tuple
 // let arry2: [string, number] = ["mike", 2];
 // // functions assign value

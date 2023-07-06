@@ -1,12 +1,24 @@
-let addBtn: any | null = document.querySelector(".addBtn");
-let descriptionInput: any  = document.querySelector(".descriptionInput");
-let todoNameInput: any  = document.querySelector(".todoNameInput");
+let addBtn: any = document.querySelector(".addBtn");
+let descriptionInput: any = document.querySelector(".descriptionInput");
+let todoNameInput: any = document.querySelector(".todoNameInput");
+let todos: any = document.querySelector(".todos");
 
 let todo: { todo: string; description: string } = { todo: "", description: "" };
 let todosArray: string[] = [];
-function addTodo(td:string,desc:string):void {
-    console.log(td,desc)
+function addTodo() {
+  console.log(todoNameInput.value, descriptionInput.value);
+  todos.insertAdjacentHTML(
+    "afterend",
+    `<li>${todoNameInput.value} ${descriptionInput.value}</li>`
+  );
 }
-if (addBtn != null) {
-  addBtn.addEventListener("click", addTodo(todoNameInput.value,descriptionInput.value));
+
+function updateValue(value: any) {
+  descriptionInput.value = value.target.value;
 }
+function updateValueName(value: any) {
+  todoNameInput.value = value.target.value;
+}
+descriptionInput.addEventListener("change", updateValue);
+todoNameInput.addEventListener("change", updateValueName);
+addBtn.addEventListener("click", addTodo);
