@@ -36,6 +36,7 @@ testLiteral = 20
 let typeCasted = 12 as const
 let typeCasted2 = <const>12
 let btn = document.querySelector('button') as HTMLButtonElement
-// let btn = document.querySelector('button')!
-
+// let btn = document.querySelector('button')!   another way
+// let btn = < HTMLButtonElement>document.querySelector('button')   another way
+// console.log((<HTMLButtonElement>btn).innerHTML) another way
 console.log(btn.innerHTML)

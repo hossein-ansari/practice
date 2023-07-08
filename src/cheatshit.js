@@ -36,5 +36,7 @@ testLiteral = 20;
 var typeCasted = 12;
 var typeCasted2 = 12;
 var btn = document.querySelector('button');
-// let btn = document.querySelector('button')!
+// let btn = document.querySelector('button')!   another way
+// let btn = < HTMLButtonElement>document.querySelector('button')   another way
+// console.log((<HTMLButtonElement>btn).innerHTML) another way
 console.log(btn.innerHTML);
