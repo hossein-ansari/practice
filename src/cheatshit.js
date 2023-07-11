@@ -39,4 +39,18 @@ var btn = document.querySelector('button');
 // let btn = document.querySelector('button')!   another way
 // let btn = < HTMLButtonElement>document.querySelector('button')   another way
 // console.log((<HTMLButtonElement>btn).innerHTML) another way
-console.log(btn.innerHTML);
+// Void property 
+var testVoid = function (num1, num2) {
+    var result = num1 + num2;
+    console.log(result);
+};
+// testVoid(2,3)
+// function type 
+var testType = function (num1, num2, callBack) {
+    var result = num1 + num2;
+    callBack(result);
+};
+testType(6, 3, number);
+function number(result) {
+    console.log(result);
+}

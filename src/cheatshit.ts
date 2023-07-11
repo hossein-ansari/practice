@@ -39,4 +39,19 @@ let btn = document.querySelector('button') as HTMLButtonElement
 // let btn = document.querySelector('button')!   another way
 // let btn = < HTMLButtonElement>document.querySelector('button')   another way
 // console.log((<HTMLButtonElement>btn).innerHTML) another way
-console.log(btn.innerHTML)
+// Void property 
+const testVoid = (num1:number,num2:number):void =>{
+  const result = num1+ num2
+  console.log(result)
+}
+// testVoid(2,3)
+// function type 
+const testType = (num1:number,num2:number, callBack:(result:number)=>void): void =>{
+  const result = num1+ num2
+  callBack(result)
+}
+testType(6,3,number)
+
+function number(result:number) {
+  console.log(result)
+}

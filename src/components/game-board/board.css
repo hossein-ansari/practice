@@ -1,0 +1,23 @@
+.board-container {
+  width: 800px;
+  height: 800px;
+  background-color: white;
+}
+.board-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /*display flex*/
+  list-style-type: none;
+  flex-wrap: wrap;
+  direction: rtl;
+}
+.board-container ul li {
+  min-width: 100px;
+  min-height: 100px;
+  background-color: rgb(175, 175, 175);
+  text-align: center;
+  line-height: 100px;
+  border: 1px solid black;
+}
