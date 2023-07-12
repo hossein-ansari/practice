@@ -55,3 +55,7 @@ testType(6,3,number)
 function number(result:number) {
   console.log(result)
 }
+// type never 
+function throwError(message: string): never {
+  throw new Error(message);
+}/
